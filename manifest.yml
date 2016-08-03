@@ -1,0 +1,10 @@
+---
+applications:
+- name: test
+  timeout: 180
+  path: ./wildfly.zip
+  buildpack: https://s3.amazonaws.com/wildfly-buildpack 
+  stack: cflinuxfs2
+  env:
+    JBP_CONFIG_JBOSS: '{ version: 9.0.2_Final }'
+    JBP_LOG_LEVEL: DEBUG
